@@ -17,7 +17,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Color(red: 0.97, green: 0.96, blue: 0.56)
+            Color(#colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1))
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 ZStack {
@@ -36,7 +36,7 @@ struct ContentView: View {
                 HStack {
                     Group {
                         Button(action:{ self.isJapanese.toggle()}) {
-                            Image(systemName: "arrow.2.circlealpha")
+                            Image(systemName: "arrow.2.circlepath")
                             Text("裏返す")
                         }
                         Button(action: {
@@ -49,10 +49,11 @@ struct ContentView: View {
                             Image(systemName: "forward.fill")
                             Text(/*@START_MENU_TOKEN@*/"次へ"/*@END_MENU_TOKEN@*/)
                         }
-                    }.padding()
-                        .foregroundColor(.white)
-                        .background(Color(red: 0.86, green: 0.45, blue: 0.03))
-                        .cornerRadius(10)
+                    }
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color(red: 0.86, green: 0.45, blue: 0.03))
+                    .cornerRadius(10)
                 }
             }
         }
